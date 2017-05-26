@@ -1,0 +1,7 @@
+var hook;
+if ((hook = hooks[dir.name]) && hook.template2Vnode) {
+	hook.template2Vnode(element)
+}
+
+
+switch case   2  map||json 
