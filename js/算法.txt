@@ -1,0 +1,43 @@
+/*
+ * state: Object, path: Array
+ * 假设path = ['a', 'b', 'c']
+ * 函数返回结果是state[a][b][c]
+ */
+function getNestedState (state, path) {
+  return path.length
+    ? path.reduce(function (state, key) { return state[key]; }, state)
+    : state
+}
+
+
+/*
+ * 如果map是一个数组 ['type1', 'type2', ...]
+ * 转化为[
+ *   {
+ *     key: type1,
+ *     val: type1
+ *   },
+ *   {
+ *     key: type2,
+ *     val: type2
+ *   },
+ *   ...
+ * ]
+ * 如果map是一个对象 {type1: fn1, type2: fn2, ...}
+ * 转化为 [
+ *   {
+ *     key: type1,
+ *     val: fn1
+ *   },
+ *   {
+ *     key: type2,
+ *     val: fn2
+ *   },
+ *   ...
+ * ]
+ */
+function normalizeMap (map) {
+  return Array.isArray(map)
+    ? map.map(function (key) { return ({ key: key, val: key }); })
+    : Object.keys(map).map(function (key) { return ({ key: key, val: map[key] }); })
+}

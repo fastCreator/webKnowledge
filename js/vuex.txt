@@ -1,0 +1,1 @@
+this.$store._committing  假冒关闭严格模式

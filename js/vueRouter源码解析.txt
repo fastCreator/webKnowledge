@@ -1,0 +1,67 @@
+VueRouter
+	static
+		install
+		version
+	constructor
+		app
+		apps
+		ready
+		readyCbs
+		options
+		mode
+		history
+		matcher
+		fallback
+		beforeHooks
+		resolveHooks
+		afterHooks
+	attr
+		app
+		apps
+		ready
+		readyCbs
+		options
+		mode
+		history
+		matcher
+		fallback
+		beforeHooks
+		resolveHooks
+		afterHooks
+	methods
+		match
+		get currentRoute
+		init
+	hook
+		beforeEach
+		beforeResolve
+		afterEach
+	on
+		onReady
+		onError
+		onReady
+		onError
+	history
+		push
+		replace
+		go
+		back
+		forward
+	get
+		getMatchedComponents
+		resolve
+		addRoutes
+
+入口
+	window.Vue.use(VueRouter)
+	VueRouter.install
+		Vue.prototype.$router = this.$root._router  //全部调用根实例
+		Vue.prototype.$route = this.$root._route 
+		mixin
+			beforeCreate
+				routevm.init
+			destroyed
+		component
+			router-view
+			router-link
+

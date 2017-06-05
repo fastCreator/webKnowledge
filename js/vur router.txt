@@ -1,0 +1,33 @@
+1，组件复用不会触发生命周期钩子
+watch: {
+    '$route' (to, from) {
+      // 对路由变化作出响应...
+    }
+  }
+beforeRouteUpdate 
+
+$route.matched==[{meta:'路由定义时存放的字段'}]
+$route.matched //所有匹配理由
+
+懒加载
+	[]为依赖  r为加载		chunk
+	require.ensure([], () => r(require('./Foo.vue')), 'group-foo')
+
+	AMD 下载完马上执行 在执行回调
+	require.ensure 下载完等下执行 回调用的时候再执行
+
+
+router.getMatchedComponents(location?)
+返回目标位置或是当前路由匹配的组件数组（是数组的定义/构造类，不是实例）。通常在服务端渲染的数据预加载时时候。
+
+router.resolve(location, current?, append?)
+解析目标位置（格式和 <router-link> 的 to prop 一样），返回包含如下属性的对象：
+{
+  location: Location;
+  route: Route;
+  href: string;
+}
+
+router.addRoutes(routes)
+动态添加更多的路由规则。参数必须是一个符合 routes 选项要求的数组。
+

@@ -1,0 +1,18 @@
+放大模式(实现模块化继承)
+　var module1 = (function (mod){
+　　　　mod.m3 = function () {
+　　　　　　//...
+　　　　};
+　　　　return mod;
+　　})(module1);
+
+宽放大模式(保证不会出现为空)
+　　var module1 = ( function (mod){
+　　　　//...
+　　　　return mod;
+　　})(window.module1 || {});
+
+输入全局变量
+　　var module1 = (function ($, YAHOO) {
+　　　　//...
+　　})(jQuery, YAHOO);

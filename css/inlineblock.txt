@@ -1,0 +1,4 @@
+inline-block:基线对齐
+没有写明vertical-align时，默认是以baseline对齐的
+没有文字的情况baseline就是“margin-bottom的那条线ttom
+有文字的情况baseline就是“最后一行文本的baseline”

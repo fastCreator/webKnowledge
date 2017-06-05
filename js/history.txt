@@ -1,0 +1,7 @@
+back()，forward()和go()  //触发popstate
+window.history.length;
+
+pushState（状态对象，标题（当前被忽略），（可选）一个URL）
+replaceState（同上）
+//不触发
+history.state//无需等待window.onpopstate(事件)
