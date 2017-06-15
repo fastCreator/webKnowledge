@@ -1,0 +1,162 @@
+官网上关于组件继承分为两大类，全局组件和局部组件。无论哪种方式，最核心的是创建组件，然后根据场景不同注册组件。
+有一点要牢记，“Vue.js 组件其实都是被扩展的 Vue 实例”！
+1. 全局组件 
+// 方式一
+var MyComponent = Vue.extend({
+  name: 'my-component',
+  template: '<div>A custom component!</div>'
+});
+Vue.component('my-component', MyComponent);
+ 
+// 方式二
+Vue.component('my-component', {
+  name: 'my-component',
+  template: '<div>A custom component!</div>'
+});
+ 
+// 使用组件
+<div id="example">
+  <my-component></my-component>
+</div>
+主要涉及到两个静态方法：
+Vue.extend：通过扩展Vue实例的方法创建组件
+Vue.component：注册组件
+先来看看Vue.extend源码，解释参考中文注释： 
+Vue.extend = function (extendOptions) {
+ extendOptions = extendOptions || {};
+ var Super = this;
+ var isFirstExtend = Super.cid === 0;
+ if (isFirstExtend && extendOptions._Ctor) {
+  return extendOptions._Ctor;
+ }
+ var name = extendOptions.name || Super.options.name;
+ // 如果有name属性，即组件名称，检测name拼写是否合法
+ if ('development' !== 'production') {
+  if (!/^[a-zA-Z][\w-]*$/.test(name)) {
+   warn('Invalid component name: "' + name + '". Component names ' + 'can only contain alphanumeric characaters and the hyphen.');
+   name = null;
+  }
+ }
+ // 创建一个VueComponent 构造函数，函数名为‘VueComponent'或者name
+ var Sub = createClass(name || 'VueComponent');
+ // 构造函数原型继承Vue.prototype
+ Sub.prototype = Object.create(Super.prototype);
+ Sub.prototype.constructor = Sub;
+ Sub.cid = cid++;
+ // 合并Vue.options和extendOptions，作为新构造函数的静态属性options  
+ Sub.options = mergeOptions(Super.options, extendOptions);
+ //'super'静态属性指向Vue函数
+ Sub['super'] = Super;
+ // start-----------------拷贝Vue静态方法  
+ // allow further extension
+ Sub.extend = Super.extend;
+ // create asset registers, so extended classes
+ // can have their private assets too.
+ config._assetTypes.forEach(function (type) {
+  Sub[type] = Super[type];
+ });
+ // end-----------------拷贝Vue静态方法  
+ // enable recursive self-lookup
+ if (name) {
+  Sub.options.components[name] = Sub;
+ }
+ // cache constructor：缓存该构造函数
+ if (isFirstExtend) {
+  extendOptions._Ctor = Sub;
+ }
+ return Sub;
+};
+可以看到，Vue.extend的关键点在于：创建一个构造函数function VueComponent(options) { this._init(options) }，通过原型链继承Vue原型上的属性和方法，再讲Vue的静态函数赋值给该构造函数。
+再看看Vue.component源码，解释参考中文注释：
+ 
+// _assetTypes: ['component', 'directive', 'elementDirective', 'filter', 'transition', 'partial']
+config._assetTypes.forEach(function (type) {
+ // 静态方法Vue.component
+ Vue[type] = function (id, definition) {
+  if (!definition) {
+   return this.options[type + 's'][id];
+  } else {
+   /* istanbul ignore if */
+   if ('development' !== 'production') {
+    if (type === 'component' && (commonTagRE.test(id) || reservedTagRE.test(id))) {
+     warn('Do not use built-in or reserved HTML elements as component ' + 'id: ' + id);
+    }
+   }
+   // 如果第二个参数是简单对象，则需要通过Vue.extend创建组件构造函数
+   if (type === 'component' && isPlainObject(definition)) {
+    if (!definition.name) {
+     definition.name = id;
+    }
+    definition = Vue.extend(definition);
+   }
+   // 将组件函数加入Vue静态属性options.components中，也就是，全局注入该组件
+   this.options[type + 's'][id] = definition;
+   return definition;
+  }
+ };
+});
+方法Vue.component的关键点是，将组件函数注入到Vue静态属性中，这样可以根据组件名称找到对应的构造函数，从而创建组件实例。
+2. 局部组件
+ 
+var MyComponent = Vue.extend({
+  template: '<div>A custom component!</div>'
+});
+ 
+new Vue({
+  el: '#example',
+  components: {
+    'my-component': MyComponent,
+    'other-component': {
+      template: '<div>A custom component!</div>'
+    }
+  }
+});
+注册局部组件的特点就是在创建Vue实例的时候，定义components属性，该属性是一个简单对象，key值为组件名称，value可以是具体的组件函数，或者创建组件必须的options对象。
+来看看Vue如何解析components属性，解释参考中文注释：
+ 
+Vue.prototype._init = function (options) {
+  options = options || {};
+  ....
+  // merge options.
+  options = this.$options = mergeOptions(this.constructor.options, options, this);
+  ...
+};
+ 
+function mergeOptions(parent, child, vm) {
+  //解析components属性
+  guardComponents(child);
+  guardProps(child);
+  ...
+}
+ 
+function guardComponents(options) {
+  if (options.components) {
+    // 将对象转为数组
+    var components = options.components = guardArrayAssets(options.components);
+    //ids数组包含组件名
+    var ids = Object.keys(components);
+    var def;
+    if ('development' !== 'production') {
+      var map = options._componentNameMap = {};
+    }
+    // 遍历组件数组
+    for (var i = 0, l = ids.length; i < l; i++) {
+      var key = ids[i];
+      if (commonTagRE.test(key) || reservedTagRE.test(key)) {
+        'development' !== 'production' && warn('Do not use built-in or reserved HTML elements as component ' + 'id: ' + key);
+        continue;
+      }
+      // record a all lowercase <-> kebab-case mapping for
+      // possible custom element case error warning
+      if ('development' !== 'production') {
+        map[key.replace(/-/g, '').toLowerCase()] = hyphenate(key);
+      }
+      def = components[key];
+      // 如果是组件定义是简单对象-对象字面量，那么需要根据该对象创建组件函数
+      if (isPlainObject(def)) {
+        components[key] = Vue.extend(def);
+      }
+    }
+  }
+}
+在创建Vue实例过程中，经过guardComponents()函数处理之后，能够保证该Vue实例中的components属性，都是由{组件名:组件函数}构成的，这样在后续使用时，可以直接利用实例内部的组件构建函数创建组件实例。

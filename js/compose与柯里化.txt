@@ -1,0 +1,43 @@
+var compose = function(...args) {
+        var len = args.length
+        var count = len - 1
+        var result
+        return function f1(...args1) {
+            result = args[count].apply(this, args1)
+            if (count <= 0) {
+                count = len - 1
+                return result
+            } else {
+                count--
+                return f1.call(null, result)
+            }
+        }
+    }
+
+    compose(f1,f2,...)(arg)
+
+    currying /柯里化
+
+    var currying = function (fn) {
+    var _args = [];
+    return function () {
+        if (arguments.length === 0) {
+            return fn.apply(this, _args);
+        }
+        Array.prototype.push.apply(_args, [].slice.call(arguments));
+        return arguments.callee;
+    }
+   }; 
+   var multi=function () {
+        var total = 0;
+        for (var i = 0, c; c = arguments[i++];) {
+            total += c;
+        }
+        return total;
+   };
+
+    var sum = currying(multi);  
+
+    sum(100,200)(300);
+    sum(400);
+    console.log(sum());     // 1000  （空白调用时才真正计算）

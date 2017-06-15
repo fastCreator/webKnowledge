@@ -1,0 +1,29 @@
+Redux 规定， 一个 State 对应一个 View。只要 State 相同，View 就相同。你知道 State，就知道 View 是什么样，反之亦然。
+
+import { createStore } from 'redux';
+const store = createStore(fn);
+
+const ADD_TODO = '添加 TODO';
+
+function addTodo(text) {
+  return {
+    type: ADD_TODO,
+    text
+  }
+}
+
+const action = addTodo('Learn Redux');
+
+store.dispatch({
+  type: 'ADD_TODO',
+  payload: 'Learn Redux'
+});
+
+
+actions.js(action 创建函数)
+
+reducers.js()
+
+createStore()
+
+dispatch(addTodo(text)

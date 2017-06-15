@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)http://www.cnblogs.com/wave-gbt/p/css.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Css 进阶篇 - _wave - 博客园</title>
+<link type="text/css" rel="stylesheet" href="./Css 进阶篇 - _wave - 博客园_files/blog-common.css">
+<link id="MainCss" type="text/css" rel="stylesheet" href="./Css 进阶篇 - _wave - 博客园_files/bundle-LessIsMoreRight.css">
+<link id="mobile-style" media="only screen and (max-width: 768px)" type="text/css" rel="stylesheet" href="./Css 进阶篇 - _wave - 博客园_files/bundle-LessIsMoreRight-mobile.css">
+<link title="RSS" type="application/rss+xml" rel="alternate" href="http://www.cnblogs.com/wave-gbt/rss">
+<link title="RSD" type="application/rsd+xml" rel="EditURI" href="http://www.cnblogs.com/wave-gbt/rsd.xml">
+<link type="application/wlwmanifest+xml" rel="wlwmanifest" href="http://www.cnblogs.com/wave-gbt/wlwmanifest.xml">
+<script async="" src="./Css 进阶篇 - _wave - 博客园_files/analytics.js.下载"></script><script src="./Css 进阶篇 - _wave - 博客园_files/jquery.js.下载" type="text/javascript"></script>  
+<script type="text/javascript">var currentBlogApp = 'wave-gbt', cb_enable_mathjax=true;var isLogined=false;</script>
+<script src="./Css 进阶篇 - _wave - 博客园_files/blog-common.js.下载" type="text/javascript"></script>
+<script type="text/x-mathjax-config;executed=true">MathJax.Hub.Config({
+  tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] },
+  TeX: { equationNumbers: { autoNumber: ['AMS'], useLabelIds: true }, extensions: ['extpfeil.js'] },
+  'HTML-CSS': { linebreaks: { automatic: true } },
+  SVG: { linebreaks: { automatic: true } }});</script><script type="text/javascript" src="./Css 进阶篇 - _wave - 博客园_files/MathJax.js.下载"></script><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body><div id="MathJax_Message" style="display: none;"></div>
+<a name="top"></a>
+
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+		
+<!--done-->
+<div class="title"><a id="Header1_HeaderTitle" class="headermaintitle" href="http://www.cnblogs.com/wave-gbt/">_wave</a></div>
+<div class="subtitle">我想在这个世界留下痕迹</div>
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li id="nav_sitehome"><a id="blog_nav_sitehome" class="menu" href="http://www.cnblogs.com/">博客园</a></li>
+<li id="nav_myhome"><a id="blog_nav_myhome" class="menu" href="http://www.cnblogs.com/wave-gbt/">首页</a></li>
+<li id="nav_newpost"><a id="blog_nav_newpost" class="menu" rel="nofollow" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">新随笔</a></li>
+<li id="nav_contact"><a id="blog_nav_contact" class="menu" rel="nofollow" href="https://msg.cnblogs.com/send/_wave">联系</a></li>
+<li id="nav_rss"><a id="blog_nav_rss" class="menu" href="http://www.cnblogs.com/wave-gbt/rss">订阅</a>
+<!--<a id="blog_nav_rss_image" class="aHeaderXML" href="http://www.cnblogs.com/wave-gbt/rss"><img src="//www.cnblogs.com/images/xml.gif" alt="订阅" /></a>--></li>
+<li id="nav_admin"><a id="blog_nav_admin" class="menu" rel="nofollow" href="https://i.cnblogs.com/">管理</a></li>
+</ul>
+
+		<div class="blogStats">
+			
+			<div id="blog_stats">
+<!--done-->
+随笔-17&nbsp;
+文章-0&nbsp;
+评论-0&nbsp;
+</div>
+			
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		
+<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			<a id="cb_post_title_url" class="postTitle2" href="http://www.cnblogs.com/wave-gbt/p/css.html">Css 进阶篇</a>
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			<div id="cnblogs_post_body" class="cnblogs-markdown"><h1 id="一css2-高阶知识常用">一、Css2 高阶知识（常用）</h1>
+<h2 id="css-优先权">1. css 优先权</h2>
+<p>优先权（从低到高）</p>
+<pre><code class="hljs django"><span class="xml">浏览器缺省设置
+外部样式表
+内部样式表（位于 <span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span> 标签内部）
+内联样式（在 HTML 元素内部）</span></code></pre>
+<p>因此，内联样式（在 HTML 元素内部）拥有最高的优先权，这意味着它将优先于以下的样式声明： 标签中的样式声明，外部样式表中的样式声明，或者浏览器中的样式声明（缺省值）。</p>
+<h2 id="背景定位background-position">2. 背景定位（background-position）</h2>
+<p>可以利用 <code>background-position</code> 属性改变图像在背景中的位置。</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">body</span>
+ { 
+ <span class="hljs-attribute">background-image</span>:<span class="hljs-built_in">url</span>(<span class="hljs-string">'/img/bg_03.png'</span>);
+ <span class="hljs-attribute">background-repeat</span>:no-repeat;
+ <span class="hljs-attribute">background-position</span>:<span class="hljs-number">50px</span> <span class="hljs-number">100px</span>;
+ }</code></pre>
+<h2 id="缩进文本-text-indent">3. 缩进文本 （text-indent）</h2>
+<p>把 Web 页面上的段落的第一行缩进，这是一种最常用的文本格式化效果。<br>
+CSS 提供了 text-indent 属性，该属性可以方便地实现文本缩进。</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">p</span> {<span class="hljs-attribute">text-indent</span>: <span class="hljs-number">5em</span>;}</code></pre>
+<p>同时也可用做文本信息隐藏（-99999px）</p>
+<h2 id="字单词间隔-word-spacing">4. 字（单词）间隔 （word-spacing）</h2>
+<pre><code class="hljs css"><span class="hljs-selector-tag">p</span><span class="hljs-selector-class">.spread</span> {<span class="hljs-attribute">word-spacing</span>: <span class="hljs-number">30px</span>;}</code></pre>
+<h2 id="字母间隔letter-spacing">5. 字母间隔（letter-spacing）</h2>
+<pre><code class="hljs css"><span class="hljs-selector-tag">h1</span> {<span class="hljs-attribute">letter-spacing</span>: -<span class="hljs-number">2px</span>;}</code></pre>
+<h2 id="字符大小写转换text-transform">6. 字符大小写转换（text-transform）</h2>
+<pre><code class="hljs swift"><span class="hljs-keyword">none</span>（默认无操作）
+uppercase（全大写）
+lowercase（全小写）
+capitalize（首字母大写）</code></pre>
+<pre><code class="hljs css"><span class="hljs-selector-tag">h1</span> {<span class="hljs-attribute">text-transform</span>: uppercase;}</code></pre>
+<h2 id="处理空白符white-space">7. 处理空白符（white-space）</h2>
+<h3 id="值-nowrap防止元素中的文本换行">1. 值 nowrap（防止元素中的文本换行）</h3>
+<pre><code class="hljs css"><span class="hljs-selector-tag">p</span>{<span class="hljs-attribute">white-space</span>: nowrap;}</code></pre>
+<h3 id="单行文本溢出显示-...text-overflow">2. 单行文本溢出显示 ...（text-overflow）</h3>
+<pre><code class="hljs css"><span class="hljs-selector-tag">span</span> {
+    <span class="hljs-attribute">overflow</span>: hidden;
+    <span class="hljs-attribute">white-space</span>: nowrap;
+    <span class="hljs-attribute">text-overflow</span>: ellipsis;
+}</code></pre>
+<h2 id="table-表格border-collapse-单一边框">8. table 表格（border-collapse 单一边框）</h2>
+<p><code>border-collapse</code> 属性设置是否将表格边框折叠为单一边框：</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">table</span>{
+ <span class="hljs-attribute">border-collapse</span>:collapse;
+}
+
+<span class="hljs-selector-tag">table</span>,<span class="hljs-selector-tag">th</span>, <span class="hljs-selector-tag">td</span>{
+ <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid black;
+}</code></pre>
+<h2 id="选择子元素">9. 选择子元素（&gt;）</h2>
+<p>如果您不希望选择任意的后代元素，而是希望缩小范围，只选择某个元素的子元素，请使用子元素选择器（Child selector）。<br>
+例如，如果您希望选择只作为 h1 元素子元素的 strong 元素，可以这样写：</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">h1</span> &gt; <span class="hljs-selector-tag">strong</span> {<span class="hljs-attribute">color</span>:red;}</code></pre>
+<p>这个规则会把第一个 h1 下面的两个 strong 元素变为红色，但是第二个 h1 中的 strong 不受影响：</p>
+<pre><code class="hljs django"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>This is <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>very<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>very<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> important.<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>This is <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>really <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>very<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> important.<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span></span></code></pre>
+<h2 id="选择相邻兄弟">10. 选择相邻兄弟 （＋）</h2>
+<p>如果需要选择紧接在另一个元素后的元素，而且二者有相同的父元素，可以使用相邻兄弟选择器（Adjacent sibling selector）。<br>
+例如，如果要增加紧接在 h1 元素后出现的段落的上边距，可以这样写：</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">h1</span> + <span class="hljs-selector-tag">p</span> {<span class="hljs-attribute">margin-top</span>:<span class="hljs-number">50px</span>;}</code></pre>
+<h2 id="伪类-pseudo-classes">11. 伪类 (Pseudo-classes)</h2>
+<p>CSS 伪类用于向某些选择器添加特殊的效果。</p>
+<h3 id="锚伪类">1. 锚伪类</h3>
+<p>在支持 CSS 的浏览器中，链接的不同状态都可以不同的方式显示，这些状态包括：活动状态，已被访问状态，未被访问状态，和鼠标悬停状态。</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:link</span> {<span class="hljs-attribute">color</span>: <span class="hljs-number">#FF0000</span>} <span class="hljs-comment">/* 未访问的链接 */</span>
+<span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:visited</span> {<span class="hljs-attribute">color</span>: <span class="hljs-number">#00FF00</span>}  <span class="hljs-comment">/* 已访问的链接 */</span>
+<span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:hover</span> {<span class="hljs-attribute">color</span>: <span class="hljs-number">#FF00FF</span>}    <span class="hljs-comment">/* 鼠标移动到链接上 */</span>
+<span class="hljs-selector-tag">a</span><span class="hljs-selector-pseudo">:active</span> {<span class="hljs-attribute">color</span>: <span class="hljs-number">#0000FF</span>}   <span class="hljs-comment">/* 选定的链接 */</span></code></pre>
+<h3 id="css2---first-child-伪类第一个子元素">2. CSS2 - :first-child 伪类（第一个子元素）</h3>
+<p>可以使用 :first-child 伪类来选择元素的第一个子元素。</p>
+<pre><code class="hljs django"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"text/css"</span>&gt;</span><span class="css">
+<span class="hljs-selector-tag">p</span><span class="hljs-selector-pseudo">:first-child</span>{
+    <span class="hljs-attribute">font-weight</span>:bold
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I am a <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>strong<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> man. I am a <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>strong<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> man.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>I am a <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>strong<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> man. I am a <span class="hljs-tag">&lt;<span class="hljs-name">em</span>&gt;</span>strong<span class="hljs-tag">&lt;/<span class="hljs-name">em</span>&gt;</span> man.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></span></code></pre>
+<h3 id="first-line-伪元素首行">3. :first-line 伪元素（首行）</h3>
+<p>"first-line" 伪元素用于向文本的首行设置特殊样式。</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">p</span><span class="hljs-selector-pseudo">:first-line</span>{
+ <span class="hljs-attribute">color</span>:<span class="hljs-number">#ff0000</span>;
+ <span class="hljs-attribute">font-variant</span>:small-caps;
+}</code></pre>
+<p>"first-line" 伪元素只能用于块级元素。</p>
+<h3 id="first-letter-伪元素首字母">4. :first-letter 伪元素（首字母）</h3>
+<p>"first-letter" 伪元素用于向文本的首字母设置特殊样式：</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">p</span><span class="hljs-selector-pseudo">:first-letter</span> {
+ <span class="hljs-attribute">color</span>:<span class="hljs-number">#ff0000</span>;
+ <span class="hljs-attribute">font-size</span>:xx-large;
+}</code></pre>
+<h3 id="css2---before-伪元素">5. CSS2 - :before 伪元素</h3>
+<p>":before" 伪元素可以在元素的内容前面插入新内容。</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">h1</span><span class="hljs-selector-pseudo">:before</span> {
+ <span class="hljs-attribute">content</span>:<span class="hljs-built_in">url</span>(logo.gif);
+}</code></pre>
+<h3 id="css2---after-伪元素">6. CSS2 - :after 伪元素</h3>
+<p>":after" 伪元素可以在元素的内容之后插入新内容。</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">h1</span><span class="hljs-selector-pseudo">:after</span> {
+ <span class="hljs-attribute">content</span>:<span class="hljs-built_in">url</span>(logo.gif);
+}</code></pre>
+<h2 id="使用-margin-属性来水平对齐">12. 使用 margin 属性来水平对齐</h2>
+<p>可通过将左和右外边距设置为 "auto"，来对齐块元素。</p>
+<pre><code class="hljs css"><span class="hljs-selector-class">.center</span> {
+    <span class="hljs-attribute">margin-left</span>:auto;
+    <span class="hljs-attribute">margin-right</span>:auto;
+    <span class="hljs-attribute">width</span>:<span class="hljs-number">70%</span>;
+    <span class="hljs-attribute">background-color</span>:<span class="hljs-number">#b0e0e6</span>;
+}</code></pre>
+<h2 id="改变光标-cursorpointer">13. 改变光标 （cursor:pointer）</h2>
+<pre><code class="hljs css"><span class="hljs-selector-tag">span</span><span class="hljs-selector-class">.pointer</span> {<span class="hljs-attribute">cursor</span>:pointer;}
+<span class="hljs-selector-tag">span</span><span class="hljs-selector-class">.crosshair</span> {<span class="hljs-attribute">cursor</span>:crosshair;}
+<span class="hljs-selector-tag">span</span><span class="hljs-selector-class">.help</span> {<span class="hljs-attribute">cursor</span>:help;}
+<span class="hljs-selector-tag">span</span><span class="hljs-selector-class">.wait</span> {<span class="hljs-attribute">cursor</span>:wait;}</code></pre>
+<h2 id="透明度-opacity">14. 透明度 （opacity）</h2>
+<p>定义透明效果的 CSS3 属性是 opacity。</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">img</span>{
+    <span class="hljs-attribute">opacity</span>:<span class="hljs-number">0.4</span>;
+    <span class="hljs-attribute">filter</span>:<span class="hljs-built_in">alpha</span>(opacity=<span class="hljs-number">40</span>); <span class="hljs-comment">/* 针对 IE8 以及更早的版本 */</span>
+}</code></pre>
+<p>IE9, Firefox, Chrome, Opera 和 Safari 使用属性 opacity 来设定透明度。opacity 属性能够设置的值从 0.0 到 1.0。值越小，越透明。<br>
+IE8 以及更早的版本使用滤镜 filter:alpha(opacity=x)。x 能够取的值从 0 到 100。值越小，越透明。</p>
+<h2 id="颜色透明rgba">15. 颜色透明（RGBA）</h2>
+<pre><code class="hljs css"><span class="hljs-selector-tag">background</span>: <span class="hljs-selector-tag">rgba</span>(0, 0, 0, 0<span class="hljs-selector-class">.6</span>) ;</code></pre>
+<h1 id="二css3-新特性">二、Css3 新特性</h1>
+<p><strong>CSS3 标准</strong><br>
+W3C 仍然在对 CSS3 规范进行开发。<br>
+不过，现代浏览器已经实现了相当多的 CSS3 属性。</p>
+<h2 id="css3-圆角边框border-radius">１. CSS3 圆角边框（border-radius）</h2>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span>{
+    <span class="hljs-attribute">text-align</span>:center;
+    <span class="hljs-attribute">border</span>:<span class="hljs-number">2px</span> solid <span class="hljs-number">#a1a1a1</span>;
+    <span class="hljs-attribute">border-radius</span>:<span class="hljs-number">25px</span>;
+    <span class="hljs-attribute">-moz-border-radius</span>:<span class="hljs-number">25px</span>; <span class="hljs-comment">/* 老的 Firefox */</span>
+}</code></pre>
+<h2 id="css3-边框阴影box-shadow">2. CSS3 边框阴影（box-shadow）</h2>
+<p>语法：box-shadow: h-shadow v-shadow blur spread color inset;</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span>{
+    <span class="hljs-attribute">width</span>:<span class="hljs-number">300px</span>;
+    <span class="hljs-attribute">height</span>:<span class="hljs-number">100px</span>;
+    <span class="hljs-attribute">background-color</span>:<span class="hljs-number">#ff9900</span>;
+    <span class="hljs-attribute">-moz-box-shadow</span>: <span class="hljs-number">10px</span> <span class="hljs-number">10px</span> <span class="hljs-number">5px</span> <span class="hljs-number">#888888</span>; <span class="hljs-comment">/* 老的 Firefox */</span>
+    <span class="hljs-attribute">box-shadow</span>: <span class="hljs-number">10px</span> <span class="hljs-number">10px</span> <span class="hljs-number">5px</span> <span class="hljs-number">#888888</span>;
+}</code></pre>
+<h2 id="css3-文本阴影text-shadow">3. CSS3 文本阴影（text-shadow）</h2>
+<p>您能够规定水平阴影、垂直阴影、模糊距离，以及阴影的颜色：</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">h1</span>{
+    <span class="hljs-attribute">text-shadow</span>: <span class="hljs-number">5px</span> <span class="hljs-number">5px</span> <span class="hljs-number">5px</span> <span class="hljs-number">#FF0000</span>;
+}</code></pre>
+<h2 id="css3-自动换行word-wrap">4. CSS3 自动换行（word-wrap）</h2>
+<p>在 CSS3 中，word-wrap 属性允许您允许文本强制文本进行换行 - 即使这意味着会对单词进行拆分。<br>
+允许对长单词进行拆分，并换行到下一行：</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">p</span> {<span class="hljs-attribute">word-wrap</span>:break-word;}</code></pre>
+<h2 id="css3-字体font-face">5. CSS3 字体（@font-face）</h2>
+<p><strong>使用您需要的字体</strong><br>
+在新的 @font-face 规则中，您必须首先定义字体的名称（比如 myFirstFont），然后指向该字体文件。<br>
+如需为 HTML 元素使用字体，请通过 font-family 属性来引用字体的名称 (myFirstFont)：</p>
+<pre><code class="hljs django"><span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css"> 
+@<span class="hljs-keyword">font-face</span> {
+    <span class="hljs-attribute">font-family</span>: myFirstFont;
+    <span class="hljs-attribute">src</span>: <span class="hljs-built_in">url</span>(<span class="hljs-string">'Sansation_Light.ttf'</span>),
+    <span class="hljs-built_in">url</span>(<span class="hljs-string">'Sansation_Light.eot'</span>); <span class="hljs-comment">/* IE9+ */</span>
+}
+
+<span class="hljs-selector-tag">div</span> {
+    <span class="hljs-attribute">font-family</span>:myFirstFont;
+}
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span></span></code></pre>
+<h2 id="css3-2d-转换">6. CSS3 2D 转换</h2>
+<p>Internet Explorer 10、Firefox 以及 Opera 支持 transform 属性。<br>
+Chrome 和 Safari 需要前缀 -webkit-。<br>
+注释：Internet Explorer 9 需要前缀 -ms-。</p>
+<p>通过 CSS3 转换，我们能够对元素进行移动、缩放、转动、拉长或拉伸。</p>
+<h3 id="translate方法-位置移动">1. translate()方法 （位置移动）</h3>
+<p>通过 translate() 方法，元素从其当前位置移动，根据给定的 left（x 坐标） 和 top（y 坐标） 位置参数：</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span> {
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">50px</span>,<span class="hljs-number">100px</span>);
+    <span class="hljs-attribute">-ms-transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">50px</span>,<span class="hljs-number">100px</span>);   <span class="hljs-comment">/* IE 9 */</span>
+    <span class="hljs-attribute">-webkit-transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">50px</span>,<span class="hljs-number">100px</span>);   <span class="hljs-comment">/* Safari and Chrome */</span>
+    <span class="hljs-attribute">-o-transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">50px</span>,<span class="hljs-number">100px</span>);    <span class="hljs-comment">/* Opera */</span>
+    <span class="hljs-attribute">-moz-transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">50px</span>,<span class="hljs-number">100px</span>);  <span class="hljs-comment">/* Firefox */</span>
+}</code></pre>
+<h3 id="rotate方法顺时针旋转角度">2. rotate()方法（顺时针旋转角度）</h3>
+<p>通过 rotate() 方法，元素顺时针旋转给定的角度。允许负值，元素将逆时针旋转。</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span> {
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">30deg</span>);
+    <span class="hljs-attribute">-ms-transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">30deg</span>);   <span class="hljs-comment">/* IE 9 */</span>
+    <span class="hljs-attribute">-webkit-transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">30deg</span>);   <span class="hljs-comment">/* Safari and Chrome */</span>
+    <span class="hljs-attribute">-o-transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">30deg</span>);    <span class="hljs-comment">/* Opera */</span>
+    <span class="hljs-attribute">-moz-transform</span>: <span class="hljs-built_in">rotate</span>(<span class="hljs-number">30deg</span>);  <span class="hljs-comment">/* Firefox */</span>
+}</code></pre>
+<h3 id="scale-方法改变尺寸">3. scale() 方法（改变尺寸）</h3>
+<p>通过 scale() 方法，元素的尺寸会增加或减少，根据给定的宽度（X 轴）和高度（Y 轴）参数：</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span> {
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">scale</span>(<span class="hljs-number">2</span>,<span class="hljs-number">4</span>);
+    <span class="hljs-attribute">-ms-transform</span>: <span class="hljs-built_in">scale</span>(<span class="hljs-number">2</span>,<span class="hljs-number">4</span>);  <span class="hljs-comment">/* IE 9 */</span>
+    <span class="hljs-attribute">-webkit-transform</span>: <span class="hljs-built_in">scale</span>(<span class="hljs-number">2</span>,<span class="hljs-number">4</span>);  <span class="hljs-comment">/* Safari 和 Chrome */</span>
+    <span class="hljs-attribute">-o-transform</span>: <span class="hljs-built_in">scale</span>(<span class="hljs-number">2</span>,<span class="hljs-number">4</span>);   <span class="hljs-comment">/* Opera */</span>
+    <span class="hljs-attribute">-moz-transform</span>: <span class="hljs-built_in">scale</span>(<span class="hljs-number">2</span>,<span class="hljs-number">4</span>); <span class="hljs-comment">/* Firefox */</span>
+}</code></pre>
+<p>值 scale(2,4) 把宽度转换为原始尺寸的 2 倍，把高度转换为原始高度的 4 倍。</p>
+<h3 id="skew-方法元素翻转角度">4. skew() 方法（元素翻转角度）</h3>
+<p>通过 skew() 方法，元素翻转给定的角度，根据给定的水平线（X 轴）和垂直线（Y 轴）参数：</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span> {
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">skew</span>(<span class="hljs-number">30deg</span>,<span class="hljs-number">20deg</span>);
+    <span class="hljs-attribute">-ms-transform</span>: <span class="hljs-built_in">skew</span>(<span class="hljs-number">30deg</span>,<span class="hljs-number">20deg</span>);   <span class="hljs-comment">/* IE 9 */</span>
+    <span class="hljs-attribute">-webkit-transform</span>: <span class="hljs-built_in">skew</span>(<span class="hljs-number">30deg</span>,<span class="hljs-number">20deg</span>);   <span class="hljs-comment">/* Safari and Chrome */</span>
+    <span class="hljs-attribute">-o-transform</span>: <span class="hljs-built_in">skew</span>(<span class="hljs-number">30deg</span>,<span class="hljs-number">20deg</span>);    <span class="hljs-comment">/* Opera */</span>
+    <span class="hljs-attribute">-moz-transform</span>: <span class="hljs-built_in">skew</span>(<span class="hljs-number">30deg</span>,<span class="hljs-number">20deg</span>);  <span class="hljs-comment">/* Firefox */</span>
+}</code></pre>
+<p>值 skew(30deg,20deg) 围绕 X 轴把元素翻转 30 度，围绕 Y 轴翻转 20 度。</p>
+<h3 id="matrix-方法2d-转换方法组合">5. matrix() 方法（2D 转换方法组合）</h3>
+<p>matrix() 方法需要六个参数，包含数学函数，允许您：旋转、缩放、移动以及倾斜元素。</p>
+<h2 id="css3-3d-转换">7. CSS3 3D 转换</h2>
+<p>Internet Explorer 10 和 Firefox 支持 3D 转换。<br>
+Chrome 和 Safari 需要前缀 -webkit-。<br>
+Opera 仍然不支持 3D 转换（它只支持 2D 转换）。</p>
+<h3 id="rotatex-方法x-轴旋转">1. rotateX() 方法（X 轴旋转）</h3>
+<p>通过 rotateX() 方法，元素围绕其 X 轴以给定的度数进行旋转。</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span> {
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotateX</span>(<span class="hljs-number">120deg</span>);
+    <span class="hljs-attribute">-webkit-transform</span>: <span class="hljs-built_in">rotateX</span>(<span class="hljs-number">120deg</span>); <span class="hljs-comment">/* Safari 和 Chrome */</span>
+    <span class="hljs-attribute">-moz-transform</span>: <span class="hljs-built_in">rotateX</span>(<span class="hljs-number">120deg</span>);    <span class="hljs-comment">/* Firefox */</span>
+}</code></pre>
+<h3 id="rotatey-方法y-轴旋转">2. rotateY() 方法（Y 轴旋转）</h3>
+<p>通过 rotateY() 方法，元素围绕其 Y 轴以给定的度数进行旋转。</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span> {
+    <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotateY</span>(<span class="hljs-number">130deg</span>);
+    <span class="hljs-attribute">-webkit-transform</span>: <span class="hljs-built_in">rotateY</span>(<span class="hljs-number">130deg</span>); <span class="hljs-comment">/* Safari 和 Chrome */</span>
+    <span class="hljs-attribute">-moz-transform</span>: <span class="hljs-built_in">rotateY</span>(<span class="hljs-number">130deg</span>);    <span class="hljs-comment">/* Firefox */</span>
+}</code></pre>
+<h2 id="css3-过渡transition">8. CSS3 过渡（transition）</h2>
+<p>CSS3 过渡是元素从一种样式逐渐改变为另一种的效果。</p>
+<h3 id="transition-width">1. transition: width</h3>
+<p>应用于宽度属性的过渡效果，时长为 2 秒：</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span> {
+    <span class="hljs-attribute">transition</span>: width <span class="hljs-number">2s</span>;
+    <span class="hljs-attribute">-moz-transition</span>: width <span class="hljs-number">2s</span>;  <span class="hljs-comment">/* Firefox 4 */</span>
+    <span class="hljs-attribute">-webkit-transition</span>: width <span class="hljs-number">2s</span>;   <span class="hljs-comment">/* Safari 和 Chrome */</span>
+    <span class="hljs-attribute">-o-transition</span>: width <span class="hljs-number">2s</span>;    <span class="hljs-comment">/* Opera */</span>
+}
+
+<span class="hljs-selector-tag">div</span><span class="hljs-selector-pseudo">:hover</span> {
+    <span class="hljs-attribute">width</span>:<span class="hljs-number">300px</span>;
+}</code></pre>
+<h3 id="width-2s-height-2s-transform-2s多项改变">2. width 2s, height 2s, transform 2s（多项改变）</h3>
+<p>如需向多个样式添加过渡效果，请添加多个属性，由逗号隔开：</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span> {
+    <span class="hljs-attribute">transition</span>: width <span class="hljs-number">2s</span>, height <span class="hljs-number">2s</span>, transform <span class="hljs-number">2s</span>;
+    <span class="hljs-attribute">-moz-transition</span>: width <span class="hljs-number">2s</span>, height <span class="hljs-number">2s</span>, -moz-transform <span class="hljs-number">2s</span>;
+    <span class="hljs-attribute">-webkit-transition</span>: width <span class="hljs-number">2s</span>, height <span class="hljs-number">2s</span>, -webkit-transform <span class="hljs-number">2s</span>;
+    <span class="hljs-attribute">-o-transition</span>: width <span class="hljs-number">2s</span>, height <span class="hljs-number">2s</span>,-o-transform <span class="hljs-number">2s</span>;
+}</code></pre>
+<p><strong>所有的转换属性</strong><br>
+|属性|描述|CSS|<br>
+|---|:---|:---|<br>
+|transition|简写属性，用于在一个属性中设置四个过渡属性。 |3|<br>
+|transition-property|规定应用过渡的 CSS 属性的名称。 |3|<br>
+|transition-duration|定义过渡效果花费的时间。默认是 0。|3|<br>
+|transition-timing-function|规定过渡效果的时间曲线。默认是 "ease"。 |3|<br>
+|transition-delay|规定过渡效果何时开始。默认是 0。|3|</p>
+<h3 id="使用所有过渡属性">3. 使用所有过渡属性</h3>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span>{
+    <span class="hljs-attribute">transition-property</span>: width;
+    <span class="hljs-attribute">transition-duration</span>: <span class="hljs-number">1s</span>;
+    <span class="hljs-attribute">transition-timing-function</span>: linear;
+    <span class="hljs-attribute">transition-delay</span>: <span class="hljs-number">2s</span>;
+    <span class="hljs-comment">/* Firefox 4 */</span>
+    <span class="hljs-attribute">-moz-transition-property</span>:width;
+    <span class="hljs-attribute">-moz-transition-duration</span>:<span class="hljs-number">1s</span>;
+    <span class="hljs-attribute">-moz-transition-timing-function</span>:linear;
+    <span class="hljs-attribute">-moz-transition-delay</span>:<span class="hljs-number">2s</span>;
+    <span class="hljs-comment">/* Safari 和 Chrome */</span>
+    <span class="hljs-attribute">-webkit-transition-property</span>:width;
+    <span class="hljs-attribute">-webkit-transition-duration</span>:<span class="hljs-number">1s</span>;
+    <span class="hljs-attribute">-webkit-transition-timing-function</span>:linear;
+    <span class="hljs-attribute">-webkit-transition-delay</span>:<span class="hljs-number">2s</span>;
+    <span class="hljs-comment">/* Opera */</span>
+    <span class="hljs-attribute">-o-transition-property</span>:width;
+    <span class="hljs-attribute">-o-transition-duration</span>:<span class="hljs-number">1s</span>;
+    <span class="hljs-attribute">-o-transition-timing-function</span>:linear;
+    <span class="hljs-attribute">-o-transition-delay</span>:<span class="hljs-number">2s</span>;
+}</code></pre>
+<h3 id="简写的-transition-propertydurationtiming-functiondelay">4. 简写的 transition （property，duration，timing-function，delay）</h3>
+<p>属性的名称，花费的时间，时间曲线，何时开始</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span> {
+    <span class="hljs-attribute">transition</span>: width <span class="hljs-number">1s</span> ease <span class="hljs-number">2s</span>;
+    <span class="hljs-comment">/* Firefox 4 */</span>
+    <span class="hljs-attribute">-moz-transition</span>:width <span class="hljs-number">1s</span> ease <span class="hljs-number">2s</span>;
+    <span class="hljs-comment">/* Safari and Chrome */</span>
+    <span class="hljs-attribute">-webkit-transition</span>:width <span class="hljs-number">1s</span> ease <span class="hljs-number">2s</span>;
+    <span class="hljs-comment">/* Opera */</span>
+    <span class="hljs-attribute">-o-transition</span>:width <span class="hljs-number">1s</span> ease <span class="hljs-number">2s</span>;
+}</code></pre>
+<h2 id="css3-动画">9. CSS3 动画</h2>
+<p>通过 CSS3，我们能够创建动画，这可以在许多网页中取代动画图片、Flash 动画以及 JavaScript。</p>
+<p><strong>CSS3 @keyframes 规则</strong><br>
+如需在 CSS3 中创建动画，您需要学习 @keyframes 规则。<br>
+@keyframes 规则用于创建动画。在 @keyframes 中规定某项 CSS 样式，就能创建由当前样式逐渐改为新样式的动画效果。</p>
+<h3 id="关键字-fromto">1. 关键字 “from”“to”</h3>
+<pre><code class="hljs css">@<span class="hljs-keyword">keyframes</span> myfirst{
+    <span class="hljs-selector-tag">from</span> {<span class="hljs-attribute">background</span>: red;}
+    <span class="hljs-selector-tag">to</span> {<span class="hljs-attribute">background</span>: yellow;}
+}
+<span class="hljs-comment">/* Firefox */</span>
+@<span class="hljs-keyword">-moz-keyframes</span> myfirst {
+    <span class="hljs-selector-tag">from</span> {<span class="hljs-attribute">background</span>: red;}
+    <span class="hljs-selector-tag">to</span> {<span class="hljs-attribute">background</span>: yellow;}
+}
+<span class="hljs-comment">/* Safari 和 Chrome */</span>
+@<span class="hljs-keyword">-webkit-keyframes</span> myfirst {
+    <span class="hljs-selector-tag">from</span> {<span class="hljs-attribute">background</span>: red;}
+    <span class="hljs-selector-tag">to</span> {<span class="hljs-attribute">background</span>: yellow;}
+}
+<span class="hljs-comment">/* Opera */</span>
+@<span class="hljs-keyword">-o-keyframes</span> myfirst {
+    <span class="hljs-selector-tag">from</span> {<span class="hljs-attribute">background</span>: red;}
+    <span class="hljs-selector-tag">to</span> {<span class="hljs-attribute">background</span>: yellow;}
+}</code></pre>
+<p><strong>通过规定至少以下两项 CSS3 动画属性，即可将动画绑定到选择器：</strong><br>
+1. 规定动画的名称<br>
+2. 规定动画的时长<br>
+把 "myfirst" 动画捆绑到 div 元素，时长：5 秒：</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span> {
+    <span class="hljs-attribute">animation</span>: myfirst <span class="hljs-number">5s</span>;
+    <span class="hljs-attribute">-moz-animation</span>: myfirst <span class="hljs-number">5s</span>; <span class="hljs-comment">/* Firefox */</span>
+    <span class="hljs-attribute">-webkit-animation</span>: myfirst <span class="hljs-number">5s</span>;  <span class="hljs-comment">/* Safari 和 Chrome */</span>
+    <span class="hljs-attribute">-o-animation</span>: myfirst <span class="hljs-number">5s</span>;   <span class="hljs-comment">/* Opera */</span>
+}</code></pre>
+<h3 id="和-100-选择器">2. 0% 和 100% 选择器</h3>
+<p>必须定义动画的名称和时长。如果忽略时长，则动画不会允许，因为默认值是 0。<br>
+您可以改变任意多的样式任意多的次数。<br>
+请用百分比来规定变化发生的时间，或用关键词 "from" 和 "to"，等同于 0% 和 100%。<br>
+0% 是动画的开始，100% 是动画的完成。<br>
+为了得到最佳的浏览器支持，您应该始终定义 0% 和 100% 选择器。</p>
+<p>例：当动画为 25% 及 50% 时改变背景色，然后当动画 100% 完成时再次改变：</p>
+<pre><code class="hljs css">@<span class="hljs-keyword">keyframes</span> myfirst {
+    0% {<span class="hljs-attribute">background</span>: red;}
+    25% {<span class="hljs-attribute">background</span>: yellow;}
+    50% {<span class="hljs-attribute">background</span>: blue;}
+    100% {<span class="hljs-attribute">background</span>: green;}
+}
+<span class="hljs-comment">/* Firefox */</span>
+@<span class="hljs-keyword">-moz-keyframes</span> myfirst {
+    0% {<span class="hljs-attribute">background</span>: red;}
+    25% {<span class="hljs-attribute">background</span>: yellow;}
+    50% {<span class="hljs-attribute">background</span>: blue;}
+    100% {<span class="hljs-attribute">background</span>: green;}
+}
+<span class="hljs-comment">/* Safari 和 Chrome */</span>
+@<span class="hljs-keyword">-webkit-keyframes</span> myfirst {
+    0% {<span class="hljs-attribute">background</span>: red;}
+    25% {<span class="hljs-attribute">background</span>: yellow;}
+    50% {<span class="hljs-attribute">background</span>: blue;}
+    100% {<span class="hljs-attribute">background</span>: green;}
+}
+<span class="hljs-comment">/* Opera */</span>
+@<span class="hljs-keyword">-o-keyframes</span> myfirst {
+    0% {<span class="hljs-attribute">background</span>: red;}
+    25% {<span class="hljs-attribute">background</span>: yellow;}
+    50% {<span class="hljs-attribute">background</span>: blue;}
+    100% {<span class="hljs-attribute">background</span>: green;}
+}</code></pre>
+<h3 id="改变背景色和位置">3. 改变背景色和位置：</h3>
+<pre><code class="hljs css">@<span class="hljs-keyword">keyframes</span> myfirst{
+    0% {<span class="hljs-attribute">background</span>: red; <span class="hljs-attribute">left</span>:<span class="hljs-number">0px</span>; <span class="hljs-attribute">top</span>:<span class="hljs-number">0px</span>;}
+    25% {<span class="hljs-attribute">background</span>: yellow; <span class="hljs-attribute">left</span>:<span class="hljs-number">200px</span>; <span class="hljs-attribute">top</span>:<span class="hljs-number">0px</span>;}
+    50% {<span class="hljs-attribute">background</span>: blue; <span class="hljs-attribute">left</span>:<span class="hljs-number">200px</span>; <span class="hljs-attribute">top</span>:<span class="hljs-number">200px</span>;}
+    75% {<span class="hljs-attribute">background</span>: green; <span class="hljs-attribute">left</span>:<span class="hljs-number">0px</span>; <span class="hljs-attribute">top</span>:<span class="hljs-number">200px</span>;}
+    100% {<span class="hljs-attribute">background</span>: red; <span class="hljs-attribute">left</span>:<span class="hljs-number">0px</span>; <span class="hljs-attribute">top</span>:<span class="hljs-number">0px</span>;}
+}
+浏览器兼容代码省略...</code></pre>
+<p>下面的表格列出了 @keyframes 规则和所有动画属性：<br>
+|属性|描述|CSS|<br>
+|---|:---|:---|<br>
+<a href="mailto:%7C@keyframes%7C%E8%A7%84%E5%AE%9A%E5%8A%A8%E7%94%BB">|@keyframes|规定动画</a>。|3|<br>
+|animation|所有动画属性的简写属性，除了 animation-play-state 属性。|3|<br>
+|animation-name|规定 @keyframes 动画的名称。|3|<br>
+|animation-duration|规定动画完成一个周期所花费的秒或毫秒。默认是 0。|3|<br>
+|animation-timing-function|规定动画的速度曲线。默认是 "ease"。 |3|<br>
+|animation-delay|规定动画何时开始。默认是 0。|3|<br>
+|animation-iteration-count|规定动画被播放的次数。默认是 1。|3|<br>
+|animation-direction|规定动画是否在下一周期逆向地播放。默认是 "normal"。|3|<br>
+|animation-play-state|规定动画是否正在运行或暂停。默认是 "running"。|3|<br>
+|animation-fill-mode|规定对象动画时间之外的状态。|3|</p>
+<h3 id="使用所有动画属性">4. 使用所有动画属性</h3>
+<pre><code class="hljs yaml">div{
+<span class="hljs-attr">    animation-name:</span> myfirst;
+<span class="hljs-attr">    animation-duration:</span> <span class="hljs-number">5</span>s;
+<span class="hljs-attr">    animation-timing-function:</span> linear;
+<span class="hljs-attr">    animation-delay:</span> <span class="hljs-number">2</span>s;
+<span class="hljs-attr">    animation-iteration-count:</span> infinite;
+<span class="hljs-attr">    animation-direction:</span> alternate;
+<span class="hljs-attr">    animation-play-state:</span> running;
+    浏览器兼容代码省略...
+}</code></pre>
+<h3 id="使用简写的动画-animation-属性">5. 使用简写的动画 animation 属性</h3>
+<p>动画的名称,一个周期所花费的秒,速度曲线,何时开始,播放的次数</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span>{
+    <span class="hljs-attribute">animation</span>: myfirst <span class="hljs-number">5s</span> linear <span class="hljs-number">2s</span> infinite alternate;
+    <span class="hljs-comment">/* Firefox: */</span>
+    <span class="hljs-attribute">-moz-animation</span>: myfirst <span class="hljs-number">5s</span> linear <span class="hljs-number">2s</span> infinite alternate;
+    <span class="hljs-comment">/* Safari 和 Chrome: */</span>
+    <span class="hljs-attribute">-webkit-animation</span>: myfirst <span class="hljs-number">5s</span> linear <span class="hljs-number">2s</span> infinite alternate;
+    <span class="hljs-comment">/* Opera: */</span>
+    <span class="hljs-attribute">-o-animation</span>: myfirst <span class="hljs-number">5s</span> linear <span class="hljs-number">2s</span> infinite alternate;
+}</code></pre>
+<h2 id="css3-多列">10. CSS3 多列</h2>
+<p>通过 CSS3，您能够创建多个列来对文本进行布局 - 就像报纸那样！</p>
+<h3 id="css3-创建多列column-count">1. CSS3 创建多列（column-count）</h3>
+<p>把 div 元素中的文本分隔为三列：</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span>{
+    <span class="hljs-attribute">-moz-column-count</span>:<span class="hljs-number">3</span>; <span class="hljs-comment">/* Firefox */</span>
+    <span class="hljs-attribute">-webkit-column-count</span>:<span class="hljs-number">3</span>; <span class="hljs-comment">/* Safari 和 Chrome */</span>
+    <span class="hljs-attribute">column-count</span>:<span class="hljs-number">3</span>;
+}</code></pre>
+<h3 id="css3-规定列之间的间隔column-gap">2. CSS3 规定列之间的间隔（column-gap）</h3>
+<p>规定列之间 40 像素的间隔：</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span>{
+    <span class="hljs-attribute">-moz-column-gap</span>:<span class="hljs-number">40px</span>;   <span class="hljs-comment">/* Firefox */</span>
+    <span class="hljs-attribute">-webkit-column-gap</span>:<span class="hljs-number">40px</span>;    <span class="hljs-comment">/* Safari 和 Chrome */</span>
+    <span class="hljs-attribute">column-gap</span>:<span class="hljs-number">40px</span>;
+}</code></pre>
+<h3 id="css3-列规则column-rule">3. CSS3 列规则（column-rule）</h3>
+<p>规定列之间的宽度、样式和颜色规则：</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span>{
+    <span class="hljs-attribute">-moz-column-rule</span>:<span class="hljs-number">3px</span> outset <span class="hljs-number">#ff0000</span>;    <span class="hljs-comment">/* Firefox */</span>
+    <span class="hljs-attribute">-webkit-column-rule</span>:<span class="hljs-number">3px</span> outset <span class="hljs-number">#ff0000</span>; <span class="hljs-comment">/* Safari and Chrome */</span>
+    <span class="hljs-attribute">column-rule</span>:<span class="hljs-number">3px</span> outset <span class="hljs-number">#ff0000</span>;
+}</code></pre>
+<h2 id="css3-用户界面">11. CSS3 用户界面</h2>
+<p>在 CSS3 中，新的用户界面特性包括重设元素尺寸、盒尺寸以及轮廓等。</p>
+<h3 id="css3-resizing可调整大小">1. CSS3 Resizing（可调整大小）</h3>
+<p>规定 div 元素可由用户调整大小：</p>
+<pre><code class="hljs css" style="resize: both; width: 578px; height: 70px;"><span class="hljs-selector-tag">div</span>{
+    <span class="hljs-attribute">resize</span>:both;
+    <span class="hljs-attribute">overflow</span>:auto;
+}</code></pre>
+<h3 id="css3-box-sizing">2. CSS3 Box Sizing</h3>
+<p>box-sizing 属性允许您以确切的方式定义适应某个区域的具体内容。<br>
+border 或 padding的数值计入父宽高内（意思为不会增加父容器宽度）。</p>
+<p>规定两个并排的带边框方框：</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span>{
+    <span class="hljs-attribute">box-sizing</span>:border-box;
+    <span class="hljs-attribute">-moz-box-sizing</span>:border-box; <span class="hljs-comment">/* Firefox */</span>
+    <span class="hljs-attribute">-webkit-box-sizing</span>:border-box;  <span class="hljs-comment">/* Safari */</span>
+    <span class="hljs-attribute">width</span>:<span class="hljs-number">50%</span>;
+    <span class="hljs-attribute">float</span>:left;
+}</code></pre>
+<h3 id="css3-outline-offset">3. CSS3 Outline Offset</h3>
+<p>outline-offset 属性对轮廓进行偏移，并在超出边框边缘的位置绘制轮廓。</p>
+<p>规定边框边缘之外 15 像素处的轮廓：</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">div</span>{
+    <span class="hljs-attribute">border</span>:<span class="hljs-number">2px</span> solid black;
+    <span class="hljs-attribute">outline</span>:<span class="hljs-number">2px</span> solid red;
+    <span class="hljs-attribute">outline-offset</span>:<span class="hljs-number">15px</span>;
+}</code></pre>
+<h1 id="三编写-css-注意事项">三、编写 CSS 注意事项</h1>
+<h2 id="修饰选择器尽量少用">1. 修饰选择器（尽量少用）</h2>
+<p>能写<code>.nav{}</code>就尽量不要写<code>ul.nav{}</code>。过分修饰选择器将影响性能，影响 class 复用性，会增加选择器私有度。这些都应当竭力避免的。<br>
+如果想描述我们规划的 class 作用范围，可以在选择器前加上注释，如下写法：</p>
+<pre><code class="hljs css"><span class="hljs-comment">/*ul*/</span>
+<span class="hljs-selector-class">.nav</span>{}</code></pre>
+<p>这样我们就能在不影响代码私有度的前提下获知 class 作用范围。</p>
+<h2 id="布局宽度和高度">2. 布局（宽度和高度）</h2>
+<p>所有内部组件都不要声明宽度，而由其外层父容器块（格栅系统）来决定。理想情况下，格栅系统应当用百分比设定。<br>
+<strong>坚决不要声明高度。</strong>高度应当仅用于尺寸已经固定的东西，例如图片。在 p，ul，div 等元素上不应当声明高度。如果需要的话可以写 line-height，这个更加灵活。。</p>
+<h2 id="简写谨慎使用">3. 简写（谨慎使用）</h2>
+<p>编写像</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">background</span><span class="hljs-selector-pseudo">:red</span>;</code></pre>
+<p>这样的属性的确很省事，但是你这么写的意思其实是同时声明</p>
+<pre><code class="hljs swift">background-image:<span class="hljs-keyword">none</span>;
+background-position:top <span class="hljs-keyword">left</span>;
+background-<span class="hljs-keyword">repeat</span>: <span class="hljs-keyword">repeat</span>;
+background-color:red;</code></pre>
+<p>最优应当改为</p>
+<pre><code class="hljs css"><span class="hljs-selector-tag">background-color</span><span class="hljs-selector-pseudo">:red</span>;</code></pre>
+<p>类似的，像 <code>margin:0;</code> 这样的声明的确简洁清爽，但是还是应当尽量写清楚。如果你只是想修改底边边距，就要具体一些，写成 <code>margin-bottom:0;</code>。<br>
+简写虽然是好东西，但是注意切勿滥用。</p>
+<h2 id="idcss-里坚决不要用-id">4. ID（CSS 里坚决不要用 ID）</h2>
+<p><strong>在 HTML 里 ID 可以用于 JS 以及锚点定位</strong>，但是在 CSS 里只要用 class，一个 ID 也不要用。</p>
+<p>Class 的优势在于复用性，而且私有度也并不高。私有度非常容易导致问题，所以将其降低就尤为重要。ID 的私有度是 class 的 255 倍，所以在 CSS 中坚决不要使用。</p>
+<h2 id="选择器保持选择器简短高效">5. 选择器（保持选择器简短高效）</h2>
+<ul>
+<li>结构复杂的选择器将会影响性能。（如<code>.sidebar h3 span{}</code>为三层，<code>.content ul p a{}</code>是四层），层级越深浏览器的消耗就越大。选择器应当尽量简短，更好的办法是直接给你想要添加样式的元素直接添加一个 class。</li>
+<li><p>class 名则不应当过于简略，例如<code>.user-avatar</code>就远比 <code>.usr-avt</code> 好。</p>
+<h2 id="important优先级高一般情况不要用">6. !important（优先级高，一般情况不要用）</h2>
+<p>用 !important 提升优先级也可以，例如如果你要让某条规则一直生效的话，可以用 <code>.error{ color:red !important; }</code>。</p></li>
+</ul>
+<p>避免主动使用 !important。例如 CSS 写得很复杂时不要用它来取巧，要好好整理并重构之前的部分，保持选择器简短并且避免用 ID 将效果拔群。</p>
+<h2 id="魔数与绝对定位凑巧有效果的数字">7. 魔数与绝对定位（「凑巧有效果」的数字）</h2>
+<p>魔数（Magic Number）是指那些「凑巧有效果」的数字，这东西非常不好，缺乏拓展性。<br>
+例如 .dropdown-nav li:hover ul{ top:37px; } 把下拉菜单移动下来，远非良策，因为这里的 37px 就是个魔数。37px 会生效的原因是因为这时 .dropbox-nav 碰巧高 37px 而已。</p>
+<p>这时你应该用 .dropdown-nav li:hover ul{ top:100%; }，也即无论 .dropbox-down 多高，这个下拉菜单都会往下移动 100%。<br>
+每当你要在代码中放入数字的时候，请三思而行。</p>
+<h2 id="debugging调试">8. Debugging（调试）</h2>
+<p>如果你要解决 CSS 问题的话，先把旧代码拿掉再写新的。如果旧的 CSS 中有问题的话，写新代码是解决不了的。<br>
+把 CSS 代码和 HTML 部分删掉，直到没有 BUG 为止，然后你就知道问题出在哪里了。<br>
+有时候写上一个 overflow:hidden 或者其它能把问题藏起来的代码的确效果立竿见影，但是 overflow 方面可能根本就没问题。所以要治本，而不是单纯治标。</p>
+</div><div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block">
+<div id="BlogPostCategory">分类: <a href="http://www.cnblogs.com/wave-gbt/category/871757.html" target="_blank">Css</a></div>
+<div id="EntryTag">标签: <a href="http://www.cnblogs.com/wave-gbt/tag/%23css/">#css</a></div>
+<div id="blog_post_info"><div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(5804255,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+            <a id="green_channel_follow" onclick="follow(&#39;e415789e-9f67-e611-9fc1-ac853d9f53cc&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./Css 进阶篇 - _wave - 博客园_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./Css 进阶篇 - _wave - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/wave-gbt/" target="_blank"><img src="./Css 进阶篇 - _wave - 博客园_files/20161108090711.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="http://home.cnblogs.com/u/wave-gbt/">_wave</a><br>
+            <a href="http://home.cnblogs.com/u/wave-gbt/followees">关注 - 6</a><br>
+            <a href="http://home.cnblogs.com/u/wave-gbt/followers">粉丝 - 6</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;e415789e-9f67-e611-9fc1-ac853d9f53cc&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(5804255,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">0</span>
+    </div>
+    <div class="buryit" onclick="votePost(5804255,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+</div>
+<div class="clear"></div>
+<div id="post_next_prev"><a href="http://www.cnblogs.com/wave-gbt/p/5803952.html" class="p_n_p_prefix">« </a> 上一篇：<a href="http://www.cnblogs.com/wave-gbt/p/5803952.html" title="发布于2016-08-24 17:35">去掉字符串中的空格</a><br><a href="http://www.cnblogs.com/wave-gbt/p/git.html" class="p_n_p_prefix">» </a> 下一篇：<a href="http://www.cnblogs.com/wave-gbt/p/git.html" title="发布于2016-08-26 12:48">Git 相关总结</a><br></div>
+</div>
+
+
+		</div>
+		<div class="postDesc">posted @ <span id="post-date">2016-08-24 18:50</span> <a href="http://www.cnblogs.com/wave-gbt/">_wave</a> 阅读(<span id="post_view_count">1547</span>) 评论(<span id="post_comment_count">0</span>)  <a href="https://i.cnblogs.com/EditPosts.aspx?postid=5804255" rel="nofollow">编辑</a> <a href="http://www.cnblogs.com/wave-gbt/p/css.html#" onclick="AddToWz(5804255);return false;">收藏</a></div>
+	</div>
+	<script src="./Css 进阶篇 - _wave - 博客园_files/highlight.min.js.下载"></script><script>markdown_highlight();</script><script type="text/javascript">var allowComments=true,cb_blogId=300768,cb_entryId=5804255,cb_blogApp=currentBlogApp,cb_blogUserGuid='e415789e-9f67-e611-9fc1-ac853d9f53cc',cb_entryCreatedDate='2016/8/24 18:50:00';loadViewCount(cb_entryId);</script>
+	
+</div><!--end: topics 文章、评论容器-->
+</div><a name="!comments"></a><div id="blog-comments-placeholder"></div><script type="text/javascript">var commentManager = new blogCommentManager();commentManager.renderComments(0);</script>
+<div id="comment_form" class="commentform">
+<a name="commentform"></a>
+<div id="divCommentShow"></div>
+<div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="http://www.cnblogs.com/wave-gbt/p/css.html#" onclick="return RefreshPage();">刷新页面</a><a href="http://www.cnblogs.com/wave-gbt/p/css.html#top">返回顶部</a></div>
+<div id="comment_form_container"><div class="login_tips">注册用户登录后才能发表评论，请 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，<a href="http://www.cnblogs.com/">访问</a>网站首页。</div></div>
+<div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+<div id="ad_t2"><a href="http://www.ucancode.com/index.htm" target="_blank">【推荐】50万行VC++源码: 大型组态工控、电力仿真CAD与GIS源码库</a><br><a href="http://click.aliyun.com/m/21970/" target="_blank">【阿里云】云计算科技红利邀您免费体验！云服务器、云数据库等35+产品，6个月免费使用！</a><br></div>
+<div id="opt_under_post"></div>
+<div id="cnblogs_c1" class="c_ad_block"><a href="http://cn.udacity.com/android/?utm_source=cnbolg&amp;utm_medium=referral&amp;utm_campaign=AND03" target="_blank"><img width="300" height="250" src="./Css 进阶篇 - _wave - 博客园_files/24442-20170613154413368-1655528381.jpg" alt="Andorid_0613"></a></div>
+<div id="under_post_news"><div class="itnews c_ad_block"><b>最新IT新闻</b>:<br> ·  <a href="http://news.cnblogs.com/n/571651/" target="_blank">雅虎CEO梅耶尔的告别信：怀念、感激和乐观</a><br> ·  <a href="http://news.cnblogs.com/n/571655/" target="_blank">小程序新增“星标”功能</a><br> ·  <a href="http://news.cnblogs.com/n/571653/" target="_blank">京东电脑再发声明：将坚决采取法律手段维护自身合法权益</a><br> ·  <a href="http://news.cnblogs.com/n/571659/" target="_blank">下代iPhone确认无线充电功能 防水等级升至IP68</a><br> ·  <a href="http://news.cnblogs.com/n/571660/" target="_blank">这款一键卸妆App，真的能让丑女迅速“现出原形”吗？</a><br>» <a href="http://news.cnblogs.com/" title="IT新闻" target="_blank">更多新闻...</a></div></div>
+<div id="cnblogs_c2" class="c_ad_block"><a href="https://www.mtyun.com/activity-anniversary?site=cnblogs&amp;campaign=20170601sales" target="_blank"><img width="468" height="60" src="./Css 进阶篇 - _wave - 博客园_files/24442-20170615095125603-13625507.png" alt="美团云"></a></div>
+<div id="under_post_kb"><div class="itnews c_ad_block" id="kb_block"><b>最新知识库文章</b>:<br><div id="kb_recent"> ·  <a href="http://kb.cnblogs.com/page/570194/" target="_blank">小printf的故事：什么是真正的程序员？</a><br> ·  <a href="http://kb.cnblogs.com/page/569992/" target="_blank">程序员的工作、学习与绩效</a><br> ·  <a href="http://kb.cnblogs.com/page/569056/" target="_blank">软件开发为什么很难</a><br> ·  <a href="http://kb.cnblogs.com/page/565901/" target="_blank">唱吧DevOps的落地，微服务CI/CD的范本技术解读</a><br> ·  <a href="http://kb.cnblogs.com/page/566523/" target="_blank">程序员，如何从平庸走向理想？</a><br></div>» <a href="http://kb.cnblogs.com/" target="_blank">更多知识库文章...</a></div></div>
+<div id="HistoryToday" class="c_ad_block"></div>
+<script type="text/javascript">
+    fixPostBody();
+    setTimeout(function () { incrementViewCount(cb_entryId); }, 50);
+    deliverAdT2();
+    deliverAdC1();
+    deliverAdC2();    
+    loadNewsAndKb();
+    loadBlogSignature();
+    LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+    GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate);
+    loadOptUnderPost();
+    GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);   
+</script>
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			
+<!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	<div id="blog-news"><div id="profile_block">昵称：<a href="http://home.cnblogs.com/u/wave-gbt/">_wave</a><br>园龄：<a href="http://home.cnblogs.com/u/wave-gbt/" title="入园时间：2016-08-21">9个月</a><br>粉丝：<a href="http://home.cnblogs.com/u/wave-gbt/followers/">6</a><br>关注：<a href="http://home.cnblogs.com/u/wave-gbt/followees/">6</a><div id="p_b_follow"><a href="javascript:void(0);" onclick="follow(&#39;e415789e-9f67-e611-9fc1-ac853d9f53cc&#39;)">+加关注</a></div></div></div><script type="text/javascript">loadBlogNews();</script>
+</div>
+
+			<div id="calendar"><div id="blog-calendar" style=""><table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar">
+	<tbody><tr><td colspan="7"><table class="CalTitle" cellspacing="0">
+		<tbody><tr><td class="CalNextPrev"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2017/05/01&#39;);return false;">&lt;</a></td><td align="center">2017年6月</td><td class="CalNextPrev" align="right"><a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2017/07/01&#39;);return false;">&gt;</a></td></tr>
+	</tbody></table></td></tr><tr><th class="CalDayHeader" align="center" abbr="日" scope="col">日</th><th class="CalDayHeader" align="center" abbr="一" scope="col">一</th><th class="CalDayHeader" align="center" abbr="二" scope="col">二</th><th class="CalDayHeader" align="center" abbr="三" scope="col">三</th><th class="CalDayHeader" align="center" abbr="四" scope="col">四</th><th class="CalDayHeader" align="center" abbr="五" scope="col">五</th><th class="CalDayHeader" align="center" abbr="六" scope="col">六</th></tr><tr><td class="CalOtherMonthDay" align="center">28</td><td class="CalOtherMonthDay" align="center">29</td><td class="CalOtherMonthDay" align="center">30</td><td class="CalOtherMonthDay" align="center">31</td><td align="center">1</td><td align="center">2</td><td class="CalWeekendDay" align="center">3</td></tr><tr><td class="CalWeekendDay" align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td align="center">8</td><td align="center">9</td><td class="CalWeekendDay" align="center">10</td></tr><tr><td class="CalWeekendDay" align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td><td class="CalTodayDay" align="center">15</td><td align="center">16</td><td class="CalWeekendDay" align="center">17</td></tr><tr><td class="CalWeekendDay" align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td><td align="center">22</td><td align="center">23</td><td class="CalWeekendDay" align="center">24</td></tr><tr><td class="CalWeekendDay" align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td align="center">29</td><td align="center">30</td><td class="CalOtherMonthDay" align="center">1</td></tr><tr><td class="CalOtherMonthDay" align="center">2</td><td class="CalOtherMonthDay" align="center">3</td><td class="CalOtherMonthDay" align="center">4</td><td class="CalOtherMonthDay" align="center">5</td><td class="CalOtherMonthDay" align="center">6</td><td class="CalOtherMonthDay" align="center">7</td><td class="CalOtherMonthDay" align="center">8</td></tr>
+</tbody></table></div><script type="text/javascript">loadBlogDefaultCalendar();</script></div>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><div id="sidebar_search" class="sidebar-block">
+<div id="sidebar_search" class="mySearch">
+<h3 class="catListTitle">搜索</h3>
+<div id="sidebar_search_box">
+<div id="widget_my_zzk" class="div_my_zzk"><input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk"></div>
+<div id="widget_my_google" class="div_my_zzk"><input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event)" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk"></div>
+</div>
+</div>
+
+</div><div id="sidebar_shortcut" class="sidebar-block">
+<div class="catListLink">
+<h3 class="catListTitle">常用链接</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/wave-gbt/p/" title="我的博客的随笔列表">我的随笔</a></li><li><a href="http://www.cnblogs.com/wave-gbt/MyComments.html" title="我发表过的评论列表">我的评论</a></li><li><a href="http://www.cnblogs.com/wave-gbt/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li><li><a href="http://www.cnblogs.com/wave-gbt/RecentComments.html" title="我的博客的评论列表">最新评论</a></li><li><a href="http://www.cnblogs.com/wave-gbt/tag/" title="我的博客的标签列表">我的标签</a></li>
+</ul>
+<div id="itemListLin_con" style="display:none;">
+<ul>
+
+</ul>
+</div>
+</div></div><div id="sidebar_recentposts" class="sidebar-block">
+<div class="catListEssay">
+<h3 class="catListTitle">最新随笔</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/wave-gbt/p/6243328.html">1. ubuntu 下安装scrapy</a></li><li><a href="http://www.cnblogs.com/wave-gbt/p/6035802.html">2. 网站图片轮播淡入淡出效果</a></li><li><a href="http://www.cnblogs.com/wave-gbt/p/6008125.html">3. php mail 函数发送邮件</a></li><li><a href="http://www.cnblogs.com/wave-gbt/p/5985341.html">4. 使用 GitHub 和 Hexo 搭建个人独立博客</a></li><li><a href="http://www.cnblogs.com/wave-gbt/p/5903751.html">5. ubuntu安装navicat及常见问题解决</a></li><li><a href="http://www.cnblogs.com/wave-gbt/p/5902435.html">6. MYSQL 开发技巧</a></li><li><a href="http://www.cnblogs.com/wave-gbt/p/5865386.html">7. 利用scp传输文件</a></li><li><a href="http://www.cnblogs.com/wave-gbt/p/5852420.html">8. SpringMVC 入门</a></li><li><a href="http://www.cnblogs.com/wave-gbt/p/5833022.html">9. Eclipse Meaven Spring SpringMVC Mybaits整合</a></li><li><a href="http://www.cnblogs.com/wave-gbt/p/git.html">10. Git 相关总结</a></li>
+</ul>
+</div>
+</div><div id="sidebar_toptags" class="sidebar-block">
+<div class="catListTag">
+<h3 class="catListTitle">我的标签</h3>
+<ul>
+<li><a href="http://www.cnblogs.com/wave-gbt/tag/%23java/">#java</a>(2)</li><li><a href="http://www.cnblogs.com/wave-gbt/tag/%23jsp/">#jsp</a>(1)</li><li><a href="http://www.cnblogs.com/wave-gbt/tag/%23linux/">#linux</a>(1)</li><li><a href="http://www.cnblogs.com/wave-gbt/tag/%23mysql/">#mysql</a>(1)</li><li><a href="http://www.cnblogs.com/wave-gbt/tag/%23Spring/">#Spring</a>(1)</li><li><a href="http://www.cnblogs.com/wave-gbt/tag/%23tomcat/">#tomcat</a>(1)</li><li><a href="http://www.cnblogs.com/wave-gbt/tag/%23%20tools/"># tools</a>(1)</li><li><a href="http://www.cnblogs.com/wave-gbt/tag/%23css/">#css</a>(1)</li><li><a href="http://www.cnblogs.com/wave-gbt/tag/%23git/">#git</a>(1)</li>
+</ul>
+</div></div><div id="sidebar_categories">
+<div class="catListPostCategory">
+<h3 class="catListTitle">随笔分类<span style="font-size:11px;font-weight:normal">(18)</span></h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_0_Link_0" href="http://www.cnblogs.com/wave-gbt/category/871757.html">Css(2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_1" href="http://www.cnblogs.com/wave-gbt/category/873546.html">Git(2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_2" href="http://www.cnblogs.com/wave-gbt/category/871047.html">Java(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_3" href="http://www.cnblogs.com/wave-gbt/category/871048.html">Jsp(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_4" href="http://www.cnblogs.com/wave-gbt/category/871046.html">Linux(4)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_5" href="http://www.cnblogs.com/wave-gbt/category/871316.html">MySQL(3)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_6" href="http://www.cnblogs.com/wave-gbt/category/901497.html">Php(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_7" href="http://www.cnblogs.com/wave-gbt/category/879507.html">Spring(2)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_8" href="http://www.cnblogs.com/wave-gbt/category/871431.html">Tomcat(1)</a> </li>
+
+<li><a id="CatList_LinkList_0_Link_9" href="http://www.cnblogs.com/wave-gbt/category/872002.html">在线工具&amp;云服务(1)</a> </li>
+
+</ul>
+
+</div>
+
+<div class="catListPostArchive">
+<h3 class="catListTitle">随笔档案<span style="font-size:11px;font-weight:normal">(17)</span></h3>
+
+<ul>
+
+<li><a id="CatList_LinkList_1_Link_0" href="http://www.cnblogs.com/wave-gbt/archive/2017/01.html">2017年1月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_1" href="http://www.cnblogs.com/wave-gbt/archive/2016/11.html">2016年11月 (1)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_2" href="http://www.cnblogs.com/wave-gbt/archive/2016/10.html">2016年10月 (2)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_3" href="http://www.cnblogs.com/wave-gbt/archive/2016/09.html">2016年9月 (5)</a> </li>
+
+<li><a id="CatList_LinkList_1_Link_4" href="http://www.cnblogs.com/wave-gbt/archive/2016/08.html">2016年8月 (8)</a> </li>
+
+</ul>
+
+</div>
+
+</div><div id="sidebar_scorerank" class="sidebar-block">
+<div class="catListBlogRank">
+<h3 class="catListTitle">积分与排名</h3>
+<ul>
+	<li class="liScore">
+		积分 -	4425
+	</li>
+	<li class="liRank">
+		排名 -	44493
+	</li>
+</ul>
+</div>
+
+
+</div><div id="sidebar_recentcomments" class="sidebar-block"><div id="recent_comments_wrap" style="display: none;">
+<div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+	<div id="RecentCommentsBlock"></div>
+</div>
+</div></div><div id="sidebar_topviewedposts" class="sidebar-block"><div id="topview_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock"><ul><li><a href="http://www.cnblogs.com/wave-gbt/p/css.html">1. Css 进阶篇(1548)</a></li><li><a href="http://www.cnblogs.com/wave-gbt/p/6008125.html">2. php mail 函数发送邮件(504)</a></li><li><a href="http://www.cnblogs.com/wave-gbt/p/5852420.html">3. SpringMVC 入门(422)</a></li><li><a href="http://www.cnblogs.com/wave-gbt/p/5798489.html">4. Tomcat 8080端口被占用解决方法(379)</a></li><li><a href="http://www.cnblogs.com/wave-gbt/p/jsp.html">5. 去除Jsp页面空白行(293)</a></li></ul></div>
+</div>
+</div></div><div id="sidebar_topcommentedposts" class="sidebar-block"><div id="topfeedback_posts_wrap" style="display: none;">
+<div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock"></div>
+</div>
+</div></div><div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap">
+<div class="catListView">
+<h3 class="catListTitle">推荐排行榜</h3>
+<div id="TopDiggPostsBlock"><ul><li><a href="http://www.cnblogs.com/wave-gbt/p/5852420.html">1. SpringMVC 入门(2)</a></li><li><a href="http://www.cnblogs.com/wave-gbt/p/5833022.html">2. Eclipse Meaven Spring SpringMVC Mybaits整合(1)</a></li><li><a href="http://www.cnblogs.com/wave-gbt/p/6008125.html">3. php mail 函数发送邮件(1)</a></li><li><a href="http://www.cnblogs.com/wave-gbt/p/5798489.html">4. Tomcat 8080端口被占用解决方法(1)</a></li><li><a href="http://www.cnblogs.com/wave-gbt/p/5902435.html">5. MYSQL 开发技巧(1)</a></li></ul></div>
+</div></div></div></div><script type="text/javascript">loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		
+<!--done-->
+Copyright ©2017 _wave
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+</body></html>
