@@ -1,0 +1,21 @@
+1,共享无法修改值使用getter(如共享公共地址)
+2,左边nav没有选中问题(页面刷新)(可参考以前智营销)
+beforeEnter,为左边菜单添加active
+权限
+3,路由中加入权限字段
+4,权限加入store
+
+5,在界面直接调用封装过的$http有助于解耦 $http放在vue.proptotype中，形成一个插件(vue.use)
+6,前端模拟数据应该放在前端，不要express(后台模拟)，会导致每次修改模拟数据，需要重启服务;构思，自动化模拟数据
+7,由于后端微服务，不是根据UI设计出API，前端的一个功能，可能需要几个API组合，所以建议抽取一个API文件件，交给后端维护（根据前端界面，组合API）
+8,命名即思维：在VUE中，
+9，yarn 
+	1,缓存,离线模式 — 之前下载过的包，可以离线再次安装
+	2,安全 — 下载前会检查签名及包的完整性
+	3,可靠可确定性 ，保证各平台依赖的一致性
+	4,网络优化，力求网络资源最大利用化，让资源下载完美队列执行，避免大量的无用请求，下载失败会自动重新请求，避免整个安装过程失败
+	2,并行下载（npm 单步下载，并安装;yarn 并行下载，最后安装）
+	5，扁平化模式 — 对于不匹配的依赖版本的包创立一个独立的包，避免创建重复的
+10，vue对象按生命周期书写 name,components,beforeCreate,data,props,computed,methods,watch,created,beforeMount,mounted,beforeUpdate,updated,beforeDestroy,destroyed
+11,异常需要一个全局默认处理值,直接打印msg
+12,我们的组件库以什么为开头 如 zyx-compnents

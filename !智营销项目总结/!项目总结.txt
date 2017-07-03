@@ -1,0 +1,71 @@
+一个请求
+1，输入网址
+2，搜索DNS获取ＩＰ地址,(浏览器dns缓存 操作系统dns缓存 )
+3，发起三次握手(HTTP基于TCP)
+4，tcp/ip 链接建立起来后，浏览器就可以向服务器发送http请求 
+
+ajax请求
+	1，进入bls(百度负载均衡器)
+	2，bls进入nginx(docker容器,路由请求)
+	3，API(权限空，日志统计等)
+	4，API网关（权限控制，日志统计等）
+	5，saas层(业务层)
+	6，pass层(基础服务层)
+	7，IaaS层(基础设施层) kafka(消息队列：解决服务之间调用的耦合) mysql(数据库) redis(数据缓存) 
+
+	实现了,整个系统实现了微服务，集群，分布式,达到了高内聚低耦合,零配置
+	
+	docker配置
+	1，docker-register (docker镜像仓库：存放为所有服务镜像，运行环境，源码)
+	2，docker-compose (镜像组配置，环境变量配置)
+	3，Swarm  master woker  通过主节点控制其他机器,实现自动化配置 
+
+	零配置
+	1，http请求进入,命名规范 如：os/v1,请求os这类服务，dockerdns服务发现
+	2，docker-compose（环境变量配置）
+
+静态资源请求
+	1，进入bls(百度负载均衡器)
+	2，bls进入nginx(docker容器,路由请求)
+	3，资金资源服务器返回资源
+
+进入前端架构
+	浏览器内核：渲染引擎 Js引擎
+	1，vuex：页面共享数据解耦，类似于kafka
+	2，vue-route: 页面路由处理
+	3，vue-source:
+	4，webpack 开发环境
+	5，rollup代码打包
+	6，js-css思想是否正确，css模块化处理方案
+	7，大数据量表格优化方案，数据拿下来，监听滚动进行渲染
+	8，yarn 优化npm
+	9，jsdoc 注释规范
+
+微服务(服务拆分)
+1,vue-component vue组件库(基于element封装)
+2,vue-extra  vue插件(API封装,swagger-mock)
+3,vue-auto 自动化集成工具(vue架构打包，手脚架,自动根据文件夹生成路由)
+4,vue-server (API代理,服务端渲染)
+5,vue-doc 开发文档(书写规范，开发流程，注意事项，细节优化，开发人员心得)=>命名即思维
+nginx:vue-router
+API网管:vue-router 中全局钩子函数(http请求总体控制，权限控制，数据统计,mock数据模拟)
+sass:视图组件
+pass:基础组件库,布局组建,API请求(组合API)
+iass:kafka:vuex  redis:localstorage(写一个服务)  DB:vue-source(ajax请求)
+
+
+
+架构师
+1,了解并优化整个架构流程
+2,技术选型适合该系统,该团队
+3,在架构层次考虑开发中可能遇到的问题，并尽可能在架构层次完善并解决这些问题
+
+
+
+
+
+
+
+
+
+
