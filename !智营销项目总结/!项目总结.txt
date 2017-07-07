@@ -14,16 +14,8 @@ ajax请求
 	7，IaaS层(基础设施层) kafka(消息队列：解决服务之间调用的耦合) mysql(数据库) redis(数据缓存) 
 	8，控制权限（定义页面名称+[需要调用的接口地址].join(',')）
 	实现了,整个系统实现了微服务，集群，分布式,达到了高内聚低耦合,零配置
-	
 
-在网关定义
-	viewName:{
-		控制1：[name1:API1,name2:API2]
-
-	}
-
-
-	docker配置
+docker配置
 	1，docker-register (docker镜像仓库：存放为所有服务镜像，运行环境，源码)
 	2，docker-compose (镜像组配置，环境变量配置)
 	3，Swarm  master woker  通过主节点控制其他机器,实现自动化配置 
@@ -48,32 +40,59 @@ ajax请求
 	7，大数据量表格优化方案，数据拿下来，监听滚动进行渲染
 	8，yarn 优化npm
 	9，jsdoc 注释规范
+	10，typescript
+
+在网关定义
+	"a/b/path1"：[name1:API1,name2:API2]
 
 微服务(服务拆分)
-1,vue-component vue组件库(基于element封装)
-2,vue-extra  vue插件(API封装,swagger-mock)
-3,vue-auto 自动化集成工具(vue架构打包，手脚架,自动根据文件夹生成路由)
-4,vue-server (API代理,服务端渲染)
-5,vue-doc 开发文档(书写规范，开发流程，注意事项，细节优化，开发人员心得)=>命名即思维
+	1,vue-framework-basic 
+		基础组件(基于element封装)，布局组件，dirictive，filter，基于element ui 扩展
+	2,vue-framework-extra  
+		(API封装,swagger-mock,variable.less,redis.js,is.js,dataDeal.js)
+	3,vue-framework-build 
+		自动化集成工具(vue架构打包，手脚架,自动根据文件夹生成路由,测试包,API代理,服务端渲染 开发样板文件) 
+	4,vue-framework-doc 
+		开发文档(书写规范，开发流程，注意事项，细节优化，开发人员心得)=>命名即思维 
+
+
+	1,vue-framework-sass 
+	config.js(配置文件 build.read())=>index.js(插件集成) =>vue-route(根据目录自动生成) => 
+	网关(权限控制,utils)  
+	2,swagger-mock,variable.less,is.js,dataDeal.js)
+	2,vue-framework-pass 基础组件(基于element封装)，布局组件，dirictive，filter
+	3,vue-framework-iass vuex redis.js axios.js
 nginx:vue-router
-API网管:vue-router 中全局钩子函数(http请求总体控制，权限控制，数据统计,mock数据模拟)
-sass:视图组件
-pass:基础组件库,布局组建,API请求(组合API)
-iass:kafka:vuex  redis:localstorage(写一个服务)  DB:vue-source(ajax请求)
+路由网关:vue-router 中全局钩子函数(http请求总体控制，权限控制，数据统计,mock数据模拟)
 
+sass(软件即服务):插件(),
+pass(平台即服务):基础组件库,布局组建,API请求(组合API)
+iass(基础设施即服务):kafka:vuex  redis:localstorage(写一个服务)  DB:vue-source(ajax请求)
 
+sass:应用页()(require API <API></API>数据转换,插入methods.API{getuser:})
+pass:API(根据swagger文档自动生成),(基础组件，布局组件，指令库)，variable.less(css变量)，vuex-cookie
+iass:vuex(用户名等，顶级数据，在cookie里面存一份,防止刷新问题)，redis.js(window.unloader,存取内存数据,cookie类型，localstorage类型，内存类型)，,localstory(数据持久化),manifest,utils.js(常用验证正则，list2Tree,removeArray),axios.js
 
 架构师
 1,了解并优化整个架构流程
 2,技术选型适合该系统,该团队
 3,在架构层次考虑开发中可能遇到的问题，并尽可能在架构层次完善并解决这些问题
 
+问题一,自己的module引用
+问题二,打包工具怎么写
+问题三,根据文件夹生成路由
+问题四,API代理
+问题五,http滚动样式
 
 
+产品： 智营销(解决中小企业营销难题)
+客户(企业)(cus) 平台(ap) 服务商(sp)	供应商(cp)
+内商城	外商城
+1，1门户 外商城
+2，5系统	 客户系统 平台管理 服务商管理	供应商管理 内商城
+插件:cms 小蜜蜂 塑源	促销（优惠券，大转盘）
 
-
-
-
-
+1，小蜜蜂 cms 
+2，平台	
 
 
