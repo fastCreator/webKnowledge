@@ -54,6 +54,8 @@ docker配置
 		自动化集成工具(vue架构打包，手脚架,自动根据文件夹生成路由,测试包,API代理,服务端渲染 开发样板文件) 
 	4,vue-framework-doc 
 		开发文档(书写规范，开发流程，注意事项，细节优化，开发人员心得)=>命名即思维 
+	5,vue-framework-example
+	6,vue-cli
 
 
 	1,vue-framework-sass 
@@ -71,7 +73,16 @@ iass(基础设施即服务):kafka:vuex  redis:localstorage(写一个服务)  DB:
 
 sass:应用页()(require API <API></API>数据转换,插入methods.API{getuser:})
 pass:API(根据swagger文档自动生成),(基础组件，布局组件，指令库)，variable.less(css变量)，vuex-cookie
-iass:vuex(用户名等，顶级数据，在cookie里面存一份,防止刷新问题)，redis.js(window.unloader,存取内存数据,cookie类型，localstorage类型，内存类型)，,localstory(数据持久化),manifest,utils.js(常用验证正则，list2Tree,removeArray),axios.js
+iass:vuex(用户名等，顶级数据，在cookie里面存一份,防止刷新问题)，redis.js(window.unloader,存取内存数据,cookie类型，localstorage类型，内存类型)，,localstory(数据持久化),manifest,utils.js(常用验证正则，list2Tree,removeArray),axios.js,图标库(阿里矢量图,创建一个库)
+
+
+规范
+jsdoc
+
+手脚架：
+选择core配置
+功能配置(功能见vux)
+需要valiable.less 配置
 
 架构师
 1,了解并优化整个架构流程
@@ -96,3 +107,22 @@ iass:vuex(用户名等，顶级数据，在cookie里面存一份,防止刷新问
 2，平台	
 
 
+1，打包工具
+自动化路由，
+ 一,通过require(),解决了报错问题
+ 二,懒加载
+ 三,路由中考虑权限以及首页问题
+
+权限问题
+
+nav选中问题
+
+ajax问题
+
+保存到session解决刷新时props丢失问题
+
+我的table
+input tree
+阿里图标库
+
+前端增加开发流程
